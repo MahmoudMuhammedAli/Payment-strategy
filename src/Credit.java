@@ -11,7 +11,7 @@ public class Credit extends Payment{
         this.type= type;
         this.expDate=exp;
     }
-    
+
     @Override
     public String states() {
         return "A credit was used";
