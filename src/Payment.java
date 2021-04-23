@@ -1,4 +1,6 @@
 public abstract class Payment {
     private float amount;
-    protected 
+    private IauthorizeBehavior authorizeBehavior ;
+    private IprintBehavior  printBehavior;
+    public abstract String  states();
 }
