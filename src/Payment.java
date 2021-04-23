@@ -1,2 +1,4 @@
-public class Payment {
+public abstract class Payment {
+    private float amount;
+    protected 
 }
