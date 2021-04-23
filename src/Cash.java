@@ -1,12 +1,15 @@
 public class Cash extends Payment {
-    private float cashTendered ;
-    public Cash(float c){
+    private float cashTendered;
+    private IprintBehavior p = new PrintCashTrans();
+    private IauthorizeBehavior a = new AuthorizedNon();
+
+    public Cash(float c) {
         super();
-        this.cashTendered=c;
+        this.cashTendered = c;
     }
 
     @Override
     public String states() {
-        return "cash was used to pay the bill";
+        return "cash was used to pay the bill and     " + p.printReceipt() + "authorization is:" + a.authorized();
     }
 }
